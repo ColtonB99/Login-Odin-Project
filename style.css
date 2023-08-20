@@ -1,0 +1,260 @@
+:root {
+    --main-text-color: #12171f;
+    --secondary-text-color: #1f2937;
+    --highlight-color: #596d48;
+}
+
+
+@font-face {
+    font-family: 'NorseBold';
+    src: url('Norse-Bold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('Montserrat-VariableFont_wght.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body, html {
+    margin:0;
+    font-family: "Montserrat";
+    height: 100%;
+}
+
+
+/* HERO LEFT SECTION */
+.hero-wrapper {
+    display: inline-block;
+    float: left;
+    width: 30%;
+    height: 100%;
+}
+.hero-wrapper .hero-image {
+    position: relative;
+    background-image: url("hero-image.jpg");
+    height: 100%;
+    max-width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0 0;
+    padding: 0 0;
+
+}
+
+.hero-wrapper .hero-image .logo-wrapper {
+    position: relative;
+    height: 150px;
+    background-color: rgba(0, 0, 0, .4);
+
+    top: 200px;
+}
+
+.hero-wrapper .hero-image .logo-wrapper .container {
+    position: relative;
+    height: 100%;
+    width: max-content;
+    margin: 0 auto;
+}
+
+.hero-wrapper .hero-image .logo-wrapper img {
+    position: relative;
+    height: calc(100% - 26px);
+    margin-left: 20px;
+    display: inline-block;
+    float: left;
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+.hero-wrapper .hero-image .logo-wrapper p {
+    color: #fff;
+    display: inline-block;
+    float: right;
+    font-family: "NorseBold";
+    font-size: 100px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin: 0;
+}
+
+.hero-wrapper .hero-image .hero-credits p {
+    position: absolute;
+    width: 100%;
+    margin: 0 auto;
+    bottom: 0;
+    left: 0;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 13px;
+    
+}
+
+.hero-wrapper .hero-image p a {
+    color: #fff;
+
+}
+
+
+/* FORM SECTION CSS */
+.form-section {
+    display: inline-block;
+    width: 70%;
+    height: 100%;
+    background-color: #f9fafb;
+}
+
+.form-section .intro-text {
+    margin-top: 80px;
+    padding: 40px;
+    font-size: 26px;
+    max-width: 830px;
+    font-weight: bold;
+    color: var(--main-text-color);
+}
+
+.form-section .form-wrapper .whitespace-wrapper {
+    display: flex;
+    flex-wrap: wrap; /* Wrap items to the next row */
+    width: 100%;
+    max-width: 1300px;
+    /* min-width: 100%; */
+    position: relative;
+    background-color: #fff;
+    padding: 40px;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, .1);
+
+    /* Fixing 100% Width Greater Than Parent Error */
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+.form-section .form-wrapper #FormHeader {
+    font-size: 26px;
+    font-weight: bold;
+    color: var(--main-text-color);
+    margin: 0px;
+    width: 100%;
+}
+
+.form-section .form-wrapper #SignUpForm {
+    width: 100%;
+    height: fit-content;
+    padding-top: 30px;
+}
+
+.form-section .form-wrapper #SignUpForm .input-wrap {
+    width: 50%; /* Set width for two columns */
+    max-width: 362px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    box-sizing: border-box; /* Include padding and border in width */
+    display: flex; /* Use flexbox for better alignment */
+    flex-direction: column; /* Stack input elements vertically */
+}
+
+
+.form-section .form-wrapper #SignUpForm input {
+    height: 30px;
+    width: 80%;
+    max-width: 362px;
+    border: 1px solid #e6e8ec;
+}
+
+.form-section .form-wrapper #SignUpForm .input-title {
+    color: var(--secondary-text-color);
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+
+/* CREATE ACCOUNT / LOG IN SECTION */
+.login-create-section {
+    padding: 40px;
+
+}
+
+.login-create-section button {
+    width: 300px;
+    height: 50px;
+    background-color: var(--highlight-color);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.login-create-section #login {
+    font-size: 20px;
+}
+
+.login-create-section #login a {
+    color: var(--highlight-color);
+    text-decoration: none;
+}
+
+
+
+
+
+/* MEDIA QUERIES FOR MOBILE */
+@media (max-width: 1000px) {
+    
+    .hero-wrapper {
+        height: 180px;
+    }
+    
+    .hero-wrapper .hero-image {
+        max-width: 100%;
+        max-height: 180px;
+    }
+
+    .hero-wrapper .hero-image .logo-wrapper {
+        top: 0px;
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+
+
+    .form-section {
+        width: 100%;
+
+    }
+
+    .form-section .intro-text {
+        margin-top: 0px;
+    }
+
+    .hero-wrapper {
+        width: 100%;
+    }
+}
+
+@media (max-width: 440px) {
+    .form-section .form-wrapper #SignUpForm .input-wrap {
+        width: 100%;
+    }
+
+    .form-section .form-wrapper #SignUpForm input {
+        width: 100%;
+    }
+
+    .login-create-section button {
+        width: 100%;
+    }
+
+    
+
+}
+
+
+
+
+
